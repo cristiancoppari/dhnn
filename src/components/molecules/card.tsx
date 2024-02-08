@@ -25,7 +25,7 @@ export default function Card({
                 alt="Lorem Ipsum"
                 width={400}
                 height={200}
-                className="rounded-lg"
+                className="aspect-[300/282] rounded-lg"
             />
 
             <Divider classNames="my-4" bg="black" width="full" height={2} />

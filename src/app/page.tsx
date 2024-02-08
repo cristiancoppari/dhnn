@@ -1,12 +1,19 @@
 import Hero from "@/components/organisms/hero";
-import CarouselSection from "@/components/organisms/carousel-section";
+import Cards from "@/components/organisms/cards";
+
+const CardsProps = {
+    label: "Lorem ipsum",
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    paragraph:
+        "Lorem ipsum dolor sit amet, consectetur. Aenean sed metus vel diam consequat mollis. Praesent metus",
+    button: "Call to action",
+};
 
 export default function Home() {
     return (
         <main>
             <Hero />
-
-            <CarouselSection />
+            <Cards {...CardsProps} />
         </main>
     );
 }
