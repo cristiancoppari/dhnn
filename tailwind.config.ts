@@ -7,10 +7,6 @@ const config: Config = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-<<<<<<< Updated upstream
-        screens: {
-            "2xl": "1364px",
-=======
         extend: {
             screens: {
                 "2xl": "1364px",
@@ -34,7 +30,6 @@ const config: Config = {
                 "grey-scale-900": "#212121",
                 "primary-brand-color": "#0451dd",
             },
->>>>>>> Stashed changes
         },
     },
 };
