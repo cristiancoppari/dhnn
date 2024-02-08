@@ -5,5 +5,6 @@
     "singleQuote": false,
     "printWidth": 80,
     "plugins": ["prettier-plugin-tailwindcss"],
-    "tailwindAttributes": ["classNames"]
+    "tailwindAttributes": ["classNames"],
+    "tailwindFunctions": ["cn"]
 }

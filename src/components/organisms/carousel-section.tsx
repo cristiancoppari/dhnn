@@ -1,25 +1,8 @@
 import { Title, Label, Paragraph } from "@/components/atoms/text";
 import Divider from "@/components/atoms/divider";
 import Button from "@/components/atoms/button";
-import Card from "@/components/molecules/card";
-
-const CARDS_DATA = [
-    {
-        img: "/images/plane.webp",
-        title: "Lorem ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur",
-    },
-    {
-        img: "/images/plane.webp",
-        title: "Lorem ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur",
-    },
-    {
-        img: "/images/plane.webp",
-        title: "Lorem ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur",
-    },
-];
+// import Card from "@/components/molecules/card";
+import Carousel from "@/components/molecules/carousel";
 
 export default function CarouselSection() {
     return (
@@ -42,14 +25,7 @@ export default function CarouselSection() {
             </article>
 
             <div className="col-span-full grid grid-cols-3 md:col-span-8">
-                {CARDS_DATA.map((card, index) => (
-                    <Card
-                        key={index}
-                        img={card.img}
-                        title={card.title}
-                        description={card.description}
-                    />
-                ))}
+                <Carousel />
             </div>
         </section>
     );
