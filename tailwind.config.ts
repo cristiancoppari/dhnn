@@ -14,7 +14,9 @@ const config: Config = {
             fontSize: {
                 "2xs": "0.625rem",
             },
-
+            padding: {
+                18: "4.5rem",
+            },
             colors: {
                 "grey-scale-500": "#9e9e9e",
                 "grey-scale-700": "#616161",

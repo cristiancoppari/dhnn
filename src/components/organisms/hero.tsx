@@ -4,7 +4,7 @@ import ExpandableBox from "@/components/molecules/expandable-box";
 
 export default function Hero() {
     return (
-        <section className="flex flex-col">
+        <section className="relative flex flex-col">
             <div className="relative h-[265px] md:h-[700px]">
                 <Image
                     src="/images/plane.webp"
