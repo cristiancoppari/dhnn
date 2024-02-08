@@ -1,4 +1,6 @@
-export function Logo({ classNames }: { classNames: string }) {
+import { WithClassNames } from "./text";
+
+export function Logo({ classNames }: WithClassNames) {
     return (
         <svg
             width="179"
@@ -114,6 +116,46 @@ export function Arrow() {
             <path
                 d="M7.7998 17.7787L17.6993 7.87921M17.6993 7.87921L9.90575 7.89458M17.6993 7.87921L17.6839 15.6728"
                 stroke="#0451DD"
+                strokeWidth="2"
+                strokeLinecap="square"
+            />
+        </svg>
+    );
+}
+
+export function NextArrow({ classNames }: WithClassNames) {
+    return (
+        <svg
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={classNames}
+        >
+            <path
+                d="M3.98242 16.0995L29.9824 16.0995M29.9824 16.0995L20.9389 7.09949M29.9824 16.0995L20.9389 25.0995"
+                stroke="#0451DD"
+                strokeWidth="2"
+                strokeLinecap="square"
+            />
+        </svg>
+    );
+}
+
+export function PrevArrow({ classNames }: WithClassNames) {
+    return (
+        <svg
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={classNames}
+        >
+            <path
+                d="M29.9824 16.0995L3.98242 16.0995M3.98242 16.0995L13.0259 25.0995M3.98242 16.0995L13.0259 7.09949"
+                stroke="#E0E0E0"
                 strokeWidth="2"
                 strokeLinecap="square"
             />

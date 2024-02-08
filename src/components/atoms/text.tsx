@@ -2,7 +2,7 @@ import { type PropsWithChildren, type ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type WithClassNames = {
+export type WithClassNames = {
     classNames?: string;
 };
 

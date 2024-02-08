@@ -12,8 +12,8 @@ type CardsProps = {
 
 export default function Cards({ title, label, paragraph, button }: CardsProps) {
     return (
-        <section className="flex w-full flex-col flex-wrap gap-2 pt-15 md:flex-row md:gap-6 md:py-25">
-            <article className="mb-5 px-4 md:w-[384px] md:pl-[7.5rem]">
+        <section className="flex w-full flex-col flex-wrap pt-15 md:flex-row md:gap-6 md:py-25">
+            <article className="px-4 pb-4 md:w-[384px] md:pl-[7.5rem]">
                 <Label classNames="pb-2">{label}</Label>
                 <Title as="h2">{title}</Title>
                 <Divider classNames="mb-5 bg-primary-brand-color" />
@@ -23,7 +23,7 @@ export default function Cards({ title, label, paragraph, button }: CardsProps) {
                 </Button>
             </article>
 
-            <div className="w-full pl-4">
+            <div className="mt-5 w-full pl-4">
                 <Carousel />
             </div>
         </section>

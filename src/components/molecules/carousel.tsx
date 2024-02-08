@@ -1,6 +1,8 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { NextArrow, PrevArrow } from "../atoms/icon";
 
 import Card from "@/components/molecules/card";
 
@@ -27,7 +29,30 @@ const CARDS_DATA = [
 
 const swiperConfigProps = {
     spaceBetween: 8,
-    slidesPerView: 1.1,
+    slidesPerView: 1.15,
+    modules: [Navigation, Pagination],
+    navigation: {
+        el: "#navContainer",
+        nextEl: ".carousel-next",
+        prevEl: ".carousel-prev",
+    },
+    pagination: {
+        type: "fraction",
+        el: "#paginationFraction",
+        formatFractionCurrent: function (number: string) {
+            return ("0" + number).slice(-2);
+        },
+        formatFractionTotal: function (number: string) {
+            return ("0" + number).slice(-2);
+        },
+        renderFraction: function (currentClass: string, totalClass: string) {
+            return (
+                `<span class="${currentClass}"></span> ` +
+                `<span class="text-primary-brand-color font-semibold">/</span> ` +
+                `<span class="text-grey-scale-500 ${totalClass}"></span>`
+            );
+        },
+    },
     breakpoints: {
         420: {
             slidesPerView: 1.2,
@@ -46,17 +71,45 @@ const swiperConfigProps = {
 
 export default function Carousel() {
     return (
-        <Swiper {...swiperConfigProps}>
-            {CARDS_DATA.map((card, index) => (
-                <SwiperSlide key={card.id}>
-                    <Card
-                        key={index}
-                        img={card.img}
-                        title={card.title}
-                        description={card.description}
-                    />
-                </SwiperSlide>
-            ))}
-        </Swiper>
+        <div id="cardsCarousel">
+            <Swiper {...swiperConfigProps}>
+                {CARDS_DATA.map((card, index) => (
+                    <SwiperSlide key={card.id}>
+                        <Card
+                            key={index}
+                            img={card.img}
+                            title={card.title}
+                            description={card.description}
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+
+            <CarouselNavigation />
+        </div>
+    );
+}
+
+function CarouselNavigation() {
+    return (
+        <div className="mt-6 flex items-center gap-[3.75rem]">
+            <PaginationFraction />
+            <NavigationArrows />
+        </div>
+    );
+}
+
+function PaginationFraction() {
+    // its empty because the renderFraction prop in swiperConfigProps
+    // will render the pagination
+    return <div id="paginationFraction" className="text-sm"></div>;
+}
+
+function NavigationArrows() {
+    return (
+        <div id="navContainer" className="flex gap-6">
+            <PrevArrow classNames="carousel-prev" />
+            <NextArrow classNames="carousel-next" />
+        </div>
     );
 }
