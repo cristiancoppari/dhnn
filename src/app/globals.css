@@ -5,3 +5,32 @@
 :root {
     --gray-light: #e1e5ec;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 650px 1fr; /* El contenido central es 650px y los lados crecen igualmente */
+}
+
+.content {
+    grid-column: 2 / span 1; /* El contenido se coloca en la columna del medio */
+    position: relative; /* Se establece a relative para posicionar absolutamente el texto sobre la imagen */
+    background-color: white; /* Fondo blanco para el contenido si la imagen es transparente o no carga */
+}
+
+.background-image {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    display: block; /* Eliminar espacio extra debajo de la imagen */
+}
+
+.text-content {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 0; /* Alineado a la parte superior del contenedor */
+    left: 0; /* Alineado al lado izquierdo del contenedor */
+    width: 100%; /* El texto ocupa todo el ancho del contenedor */
+    padding: 20px; /* Espacio alrededor del texto */
+    box-sizing: border-box; /* El padding se incluye en el ancho */
+    padding-right: calc(
+        100% - 650px
+    ); /* Ajusta el ancho del contenido aquí si es necesario */
+}

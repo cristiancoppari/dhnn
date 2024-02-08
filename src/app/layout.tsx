@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import Navbar from "@/components/organisms/navbar";
 import { DDINPro } from "@/lib/fonts";
 
 import "./globals.css";
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={DDINPro.className}>{children}</body>
+            <body className={DDINPro.className}>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
