@@ -7,8 +7,20 @@ const config: Config = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        screens: {
-            "2xl": "1364px",
+        extend: {
+            screens: {
+                "2xl": "1364px",
+            },
+            fontSize: {
+                "2xs": "0.625rem",
+            },
+
+            colors: {
+                "grey-scale-500": "#9e9e9e",
+                "grey-scale-700": "#616161",
+                "grey-scale-900": "#212121",
+                "primary-brand-color": "#0451dd",
+            },
         },
     },
 };
