@@ -13,7 +13,7 @@ export function Label({
     return (
         <label
             className={cn(
-                "text-grey-scale-500 text-2xs font-bold uppercase leading-5 tracking-[3px]",
+                "text-2xs font-bold uppercase leading-5 tracking-[3px] text-grey-scale-500",
                 classNames,
             )}
         >
@@ -43,7 +43,7 @@ export function Title({
     return (
         <Component
             className={cn(
-                "text-grey-scale-900 font-bold",
+                "font-bold text-grey-scale-900",
                 classNames,
                 variants[variant],
             )}
@@ -58,7 +58,7 @@ export function Paragraph({
     classNames,
 }: PropsWithChildren & WithClassNames) {
     return (
-        <p className={cn("text-grey-scale-700 leading-[22px]", classNames)}>
+        <p className={cn("leading-[22px] text-grey-scale-700", classNames)}>
             {children}
         </p>
     );
@@ -71,7 +71,7 @@ export function SmallText({
     return (
         <p
             className={cn(
-                "text-grey-scale-500 text-xs leading-[1.125rem]",
+                "text-xs leading-[1.125rem] text-grey-scale-500",
                 classNames,
             )}
         >

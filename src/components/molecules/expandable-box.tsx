@@ -5,13 +5,13 @@ import { Arrow } from "@/components/atoms/icon";
 
 export default function ExpandableBox() {
     return (
-        <div className="md:pr-18 max-w-[606px] bg-white px-4 py-8 md:grid md:grid-cols-[1fr_auto] md:gap-2 md:py-10 md:pl-[7.5rem]">
+        <div className="max-w-[606px] bg-white px-4 py-8 md:grid md:grid-cols-[1fr_auto] md:gap-2 md:py-10 md:pl-[7.5rem] md:pr-18">
             <div>
                 <Label classNames="pb-2">Lorem ipsum</Label>
 
                 <Title as="h2">Lorem ipsum dolor sit amet, consectetur</Title>
 
-                <Divider classNames="bg-primary-brand-color my-5" />
+                <Divider classNames="my-5 bg-primary-brand-color" />
 
                 <Paragraph>
                     Lorem ipsum dolor sit amet, consectetur. Aenean sed metus

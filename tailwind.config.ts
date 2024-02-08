@@ -24,7 +24,6 @@ const config: Config = {
                 12: "repeat(12, minmax(0, 5rem))",
             },
             colors: {
-                "grey-scale-50": "#fafafa",
                 "grey-scale-500": "#9e9e9e",
                 "grey-scale-700": "#616161",
                 "grey-scale-900": "#212121",

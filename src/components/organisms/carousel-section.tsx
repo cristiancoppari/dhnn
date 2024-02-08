@@ -23,13 +23,13 @@ const CARDS_DATA = [
 
 export default function CarouselSection() {
     return (
-        <section className="pt-15 md:py-25 grid grid-cols-6 justify-center gap-2 px-4 md:grid-cols-12 md:gap-6 2xl:px-[7.5rem]">
+        <section className="grid grid-cols-6 justify-center gap-2 px-4 pt-15 md:grid-cols-12 md:gap-6 md:py-25 2xl:px-[7.5rem]">
             <article className="col-span-full md:col-span-4">
                 <Label classNames="pb-2">Lorem ipsum</Label>
 
                 <Title as="h2">Lorem ipsum dolor sit amet, consectetur</Title>
 
-                <Divider classNames="bg-primary-brand-color mb-5" />
+                <Divider classNames="mb-5 bg-primary-brand-color" />
 
                 <Paragraph>
                     Lorem ipsum dolor sit amet, consectetur. Aenean sed metus
