@@ -13,7 +13,7 @@ type CardsProps = {
 export default function Cards({ title, label, paragraph, button }: CardsProps) {
     return (
         // <section className="flex w-full flex-col flex-wrap pt-15 md:flex-row md:gap-6 md:py-25 md:pl-[7.5rem]">
-        <section className="grid w-full grid-cols-1 pt-15 md:gap-6 md:py-25 md:pl-[7.5rem] lg:grid-cols-[repeat(2,minmax(0,auto))]">
+        <section className="relative grid w-full grid-cols-1 pt-15 md:gap-6 md:py-25 md:pl-[7.5rem] lg:grid-cols-[repeat(2,minmax(0,auto))]">
             <article className="px-4 pb-4 md:w-[384px] md:self-center md:px-0 md:pb-0">
                 <Label classNames="pb-2">{label}</Label>
                 <Title as="h2">{title}</Title>
@@ -27,6 +27,8 @@ export default function Cards({ title, label, paragraph, button }: CardsProps) {
             <div className="mt-5 inline w-full pl-4 md:p-0">
                 <Carousel />
             </div>
+
+            <div className="bg-grey-scale-100 absolute left-0 top-0 -z-10 hidden h-full w-[56.25%] md:block" />
         </section>
     );
 }
