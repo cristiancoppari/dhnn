@@ -26,7 +26,7 @@ export default function Card({
                 alt="Lorem Ipsum"
                 width={400}
                 height={200}
-                className="aspect-[300/282] rounded-lg md:aspect-[384/282]"
+                className="aspect-[300/282] w-full rounded-lg md:aspect-[384/282]"
             />
 
             <Divider classNames="my-4" bg="black" width="full" height={2} />

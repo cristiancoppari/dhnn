@@ -28,7 +28,7 @@ export default function Cards({ title, label, paragraph, button }: CardsProps) {
                 <Carousel />
             </div>
 
-            <div className="bg-grey-scale-100 absolute left-0 top-0 -z-10 hidden h-full w-[56.25%] md:block" />
+            <div className="bg-grey-scale-100 absolute left-0 top-0 -z-10 hidden h-full md:block md:w-[75%] lg:w-[56.25%]" />
         </section>
     );
 }

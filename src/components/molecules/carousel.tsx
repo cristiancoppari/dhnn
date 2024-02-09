@@ -62,6 +62,7 @@ const swiperConfigProps = {
         },
         768: {
             slidesPerView: 2.1,
+            spaceBetween: 8,
         },
         1024: {
             slidesPerView: 1.4,
@@ -73,7 +74,8 @@ const swiperConfigProps = {
             slidesPerView: 2.2,
         },
         1460: {
-            slidesPerView: 3.2,
+            slidesPerView: 2.4,
+            spaceBetween: 24,
         },
     },
 };
