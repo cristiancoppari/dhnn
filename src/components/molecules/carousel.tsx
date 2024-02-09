@@ -72,6 +72,9 @@ const swiperConfigProps = {
         1200: {
             slidesPerView: 2.2,
         },
+        1460: {
+            slidesPerView: 3.2,
+        },
     },
 };
 
