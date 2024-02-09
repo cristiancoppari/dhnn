@@ -24,9 +24,20 @@ export default function ExpandableBox() {
                 defaults: { duration: 0.5 },
             });
 
-            menuTimeline.current.to("#expandableContent", {
-                maxHeight: "300px",
-            });
+            menuTimeline.current
+                .to("#expandableContent", {
+                    maxHeight: "300px",
+                })
+                .from(
+                    ".animated-el",
+                    {
+                        opacity: 0,
+                        y: 20,
+                        duration: 0.5,
+                        stagger: 0.2,
+                    },
+                    "-=0.5",
+                );
         },
         { scope: containerRef },
     );
@@ -53,14 +64,14 @@ export default function ExpandableBox() {
                 <Title as="h2">Lorem ipsum dolor sit amet, consectetur</Title>
 
                 <div className="max-h-0 overflow-hidden" id="expandableContent">
-                    <Divider classNames="my-5 bg-primary-brand-color" />
+                    <Divider classNames="animated-el my-5 bg-primary-brand-color" />
 
-                    <Paragraph classNames="animated-p">
+                    <Paragraph classNames="animated-el">
                         Lorem ipsum dolor sit amet, consectetur. Aenean sed
                         metus vel diam consequat mollis. Praesent metus
                     </Paragraph>
 
-                    <Button classNames="mt-6 w-full md:w-auto">
+                    <Button classNames="animated-el mt-6 w-full md:w-auto">
                         Call to action
                     </Button>
                 </div>
