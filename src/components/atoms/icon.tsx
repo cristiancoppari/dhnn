@@ -104,7 +104,7 @@ export function Asterisc() {
     );
 }
 
-export function Arrow() {
+export function Arrow({ onClick }: { onClick: () => void }) {
     return (
         <svg
             width="25"
@@ -112,6 +112,8 @@ export function Arrow() {
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="cursor-pointer"
+            onClick={onClick || null}
         >
             <path
                 d="M7.7998 17.7787L17.6993 7.87921M17.6993 7.87921L9.90575 7.89458M17.6993 7.87921L17.6839 15.6728"

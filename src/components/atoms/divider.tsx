@@ -31,6 +31,7 @@ export default function Divider({
     return (
         <div
             className={cn(
+                "divider",
                 heightMap[height],
                 widthMap[width],
                 bgColors[bg],

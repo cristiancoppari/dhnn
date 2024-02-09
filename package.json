@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@splidejs/react-splide": "^0.7.12",
     "clsx": "^2.1.0",
