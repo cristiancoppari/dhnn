@@ -19,13 +19,14 @@ export default function Card({
     description,
 }: CardProps) {
     return (
-        <article className={cn("max-w-[24rem]", classNames)}>
+        // <article className={cn("max-w-[24rem]", classNames)}>
+        <article className={cn("", classNames)}>
             <Image
                 src={img}
                 alt="Lorem Ipsum"
                 width={400}
                 height={200}
-                className="aspect-[300/282] rounded-lg"
+                className="aspect-[300/282] rounded-lg md:aspect-[384/282]"
             />
 
             <Divider classNames="my-4" bg="black" width="full" height={2} />

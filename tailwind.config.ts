@@ -14,6 +14,9 @@ const config: Config = {
             fontSize: {
                 "2xs": "0.625rem",
             },
+            margin: {
+                30: "7.5rem",
+            },
             padding: {
                 15: "3.75rem",
                 18: "4.5rem",

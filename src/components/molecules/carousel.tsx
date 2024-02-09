@@ -2,8 +2,8 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { NextArrow, PrevArrow } from "../atoms/icon";
 
+import { NextArrow, PrevArrow } from "@/components/atoms/icon";
 import Card from "@/components/molecules/card";
 
 const CARDS_DATA = [
@@ -64,7 +64,13 @@ const swiperConfigProps = {
             slidesPerView: 2.1,
         },
         1024: {
-            slidesPerView: 3.1,
+            slidesPerView: 1.4,
+        },
+        1100: {
+            slidesPerView: 1.6,
+        },
+        1200: {
+            slidesPerView: 2.2,
         },
     },
 };
@@ -74,7 +80,7 @@ export default function Carousel() {
         <div id="cardsCarousel">
             <Swiper {...swiperConfigProps}>
                 {CARDS_DATA.map((card, index) => (
-                    <SwiperSlide key={card.id}>
+                    <SwiperSlide key={card.id} className="w-200">
                         <Card
                             key={index}
                             img={card.img}
@@ -92,7 +98,7 @@ export default function Carousel() {
 
 function CarouselNavigation() {
     return (
-        <div className="mt-6 flex items-center gap-[3.75rem]">
+        <div className="md:mr-30 mt-6 flex items-center gap-[3.75rem] md:mt-8 md:justify-end">
             <PaginationFraction />
             <NavigationArrows />
         </div>
