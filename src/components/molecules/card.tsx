@@ -29,7 +29,7 @@ export default function Card({
                 className="aspect-[300/282] w-full rounded-lg md:aspect-[384/282]"
             />
 
-            <Divider classNames="my-4" bg="black" width="full" height={2} />
+            <Divider classNames="my-4" bg="black" width="full" height="2" />
 
             <Title as="h4" variant="card" classNames="mb-2">
                 {title}

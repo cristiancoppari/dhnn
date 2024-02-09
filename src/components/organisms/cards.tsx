@@ -17,7 +17,7 @@ export default function Cards({ title, label, paragraph, button }: CardsProps) {
             <article className="px-4 pb-4 md:w-[384px] md:self-center md:px-0 md:pb-0">
                 <Label classNames="pb-2">{label}</Label>
                 <Title as="h2">{title}</Title>
-                <Divider classNames="mb-5 bg-primary-brand-color" />
+                <Divider classNames="my-5" bg="blue" />
                 <Paragraph>{paragraph}</Paragraph>
                 <Button variant="secondary" classNames="mt-6 w-full md:w-auto">
                     {button}

@@ -13,7 +13,7 @@ export function Label({
     return (
         <label
             className={cn(
-                "text-2xs font-bold uppercase leading-5 tracking-[3px] text-grey-scale-500",
+                "inline-block text-2xs font-bold uppercase leading-5 tracking-[3px] text-grey-scale-500 ",
                 classNames,
             )}
         >

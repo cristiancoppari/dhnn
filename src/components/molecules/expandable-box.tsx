@@ -7,7 +7,7 @@ export default function ExpandableBox() {
     return (
         <div className="max-w-[606px] bg-white px-4 py-8 md:grid md:grid-cols-[1fr_auto] md:gap-2 md:py-10 md:pl-[7.5rem] md:pr-18">
             <div>
-                <Label classNames="pb-2">Lorem ipsum</Label>
+                <Label classNames="inline-block pb-2">Lorem ipsum</Label>
 
                 <Title as="h2">Lorem ipsum dolor sit amet, consectetur</Title>
 
