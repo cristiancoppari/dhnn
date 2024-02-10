@@ -20,17 +20,17 @@ const SECONDARY_NAV_ITEMS = [
 
 export default function Navbar() {
     return (
-        <header className="mb-0 flex h-[3.75rem] w-full justify-between border-b border-[var(--gray-light)] 2xl:h-[5.5rem] 2xl:px-[7.5rem]">
-            <Link href="/" className="self-center pl-4 2xl:py-5">
-                <Logo classNames="w-[8.5rem] 2xl:w-[11.125rem]" />
+        <header className="relative mb-0 flex h-[3.75rem] w-full justify-between border-b border-[var(--gray-light)] xl:px-[3rem] 2xl:h-[5.5rem] 2xl:px-[7.5rem]">
+            <Link href="/" className="self-center pl-4 xl:px-0 2xl:py-5">
+                <Logo classNames="w-[8.5rem] 2xl:w-[11.125rem] 2xl:w-[8rem]" />
             </Link>
 
-            <button className="block border-l border-[var(--gray-light)] p-[1.125rem] 2xl:hidden">
+            <button className="lg-2:hidden block border-l border-[var(--gray-light)] p-[1.125rem]">
                 <NavIcon />
             </button>
 
-            <nav className="hidden 2xl:flex 2xl:gap-2">
-                <ul className="flex h-full gap-2">
+            <nav className="lg-2:top-0 lg-2:relative absolute top-full z-10 flex w-full flex-col gap-2 overflow-hidden bg-red-500 md:flex-row lg:justify-end">
+                <ul className="flex h-full flex-col gap-2 lg:flex-row">
                     {PRIMARY_NAV_ITEMS.map((item, index) => (
                         <li
                             key={index}
@@ -43,7 +43,7 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                <ul className="flex h-full">
+                <ul className="lg-2:flex-row lg-2:gap-0 flex h-full flex-col gap-2">
                     {SECONDARY_NAV_ITEMS.map((item, index) => (
                         <li
                             key={index}
