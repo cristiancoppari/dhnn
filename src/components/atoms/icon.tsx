@@ -1,5 +1,7 @@
 import { WithClassNames } from "./text";
 
+import { cn } from "@/lib/utils";
+
 export function Logo({ classNames }: WithClassNames) {
     return (
         <svg
@@ -104,7 +106,7 @@ export function Asterisc() {
     );
 }
 
-export function Arrow({ onClick }: { onClick: () => void }) {
+export function Arrow({ classNames }: WithClassNames) {
     return (
         <svg
             width="25"
@@ -112,8 +114,7 @@ export function Arrow({ onClick }: { onClick: () => void }) {
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="cursor-pointer"
-            onClick={onClick || null}
+            className={cn("cursor-pointer", classNames || "")}
         >
             <path
                 d="M7.7998 17.7787L17.6993 7.87921M17.6993 7.87921L9.90575 7.89458M17.6993 7.87921L17.6839 15.6728"
