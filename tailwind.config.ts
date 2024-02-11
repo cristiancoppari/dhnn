@@ -23,11 +23,11 @@ const config: Config = {
                 15: "3.75rem",
                 18: "4.5rem",
                 25: "6.25rem",
+                30: "7.5rem",
             },
-            gridTemplateColumns: {
-                6: "repeat(6, minmax(0, 3rem))",
-                12: "repeat(12, minmax(0, 5rem))",
-            },
+            // gridTemplateColumns: {
+            //     12: "1fr repeat(12, 5rem 1rem) 1fr",
+            // },
             colors: {
                 "grey-scale-100": "#fafafa",
                 "grey-scale-500": "#9e9e9e",
