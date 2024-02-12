@@ -1,6 +1,6 @@
-import { WithClassNames } from "./text";
-
 import { cn } from "@/lib/utils";
+
+import { WithClassNames } from "./text";
 
 export function Logo({ classNames }: WithClassNames) {
     return (
@@ -161,6 +161,23 @@ export function PrevArrow({ classNames }: WithClassNames) {
                 stroke="#E0E0E0"
                 strokeWidth="2"
                 strokeLinecap="square"
+            />
+        </svg>
+    );
+}
+
+export function ArrowRight() {
+    return (
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z"
+                fill="#E0E0E0"
             />
         </svg>
     );

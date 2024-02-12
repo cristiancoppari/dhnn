@@ -8,8 +8,10 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            height: {
+                screen: "calc(100dvh - 3.75rem)",
+            },
             screens: {
-                // "2xl": "1364px",
                 "lg-2": "1130px",
                 "2xl": "1410px",
             },
@@ -25,10 +27,8 @@ const config: Config = {
                 25: "6.25rem",
                 30: "7.5rem",
             },
-            // gridTemplateColumns: {
-            //     12: "1fr repeat(12, 5rem 1rem) 1fr",
-            // },
             colors: {
+                "grey-scale-50": "#e1e5ec",
                 "grey-scale-100": "#fafafa",
                 "grey-scale-500": "#9e9e9e",
                 "grey-scale-700": "#616161",
