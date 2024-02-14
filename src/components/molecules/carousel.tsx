@@ -6,27 +6,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import { NextArrow, PrevArrow } from "@/components/atoms/icon";
 import Card from "@/components/molecules/card";
 
-const CARDS_DATA = [
-    {
-        id: 1,
-        img: "/images/plane.webp",
-        title: "Lorem ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur",
-    },
-    {
-        id: 2,
-        img: "/images/plane.webp",
-        title: "Lorem ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur",
-    },
-    {
-        id: 3,
-        img: "/images/plane.webp",
-        title: "Lorem ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur",
-    },
-];
-
 const swiperConfigProps = {
     spaceBetween: 8,
     slidesPerView: 1.15,
@@ -36,6 +15,7 @@ const swiperConfigProps = {
         nextEl: ".carousel-next",
         prevEl: ".carousel-prev",
     },
+    // lazy: true,
     pagination: {
         type: "fraction",
         el: "#paginationFraction",
@@ -80,15 +60,38 @@ const swiperConfigProps = {
     },
 };
 
-export default function Carousel() {
+type Card = {
+    id: number;
+    image: string;
+    title: string;
+    description: string;
+};
+
+type CarouselProps = {
+    cards: Card[];
+};
+
+const images = [
+    "/images/image-1.webp",
+    "/images/image-2.webp",
+    "/images/image-3.webp",
+];
+
+export default function Carousel({ cards }: CarouselProps) {
+    const cardsWithImage = cards.map((card, index) => {
+        const imageIndex = index % images.length;
+        // Retornamos el objeto original con la propiedad de imagen agregada
+        return { ...card, image: images[imageIndex] };
+    });
+
     return (
         <div id="cardsCarousel">
             <Swiper {...swiperConfigProps}>
-                {CARDS_DATA.map((card, index) => (
+                {cardsWithImage.map((card: Card) => (
                     <SwiperSlide key={card.id} className="w-200">
                         <Card
-                            key={index}
-                            img={card.img}
+                            key={card.id}
+                            img={card.image}
                             title={card.title}
                             description={card.description}
                         />
@@ -103,7 +106,7 @@ export default function Carousel() {
 
 function CarouselNavigation() {
     return (
-        <div className="md:mr-30 mt-6 flex items-center gap-[3.75rem] md:mt-8 md:justify-end">
+        <div className="mt-6 flex items-center gap-[3.75rem] md:mr-30 md:mt-8 md:justify-end">
             <PaginationFraction />
             <NavigationArrows />
         </div>

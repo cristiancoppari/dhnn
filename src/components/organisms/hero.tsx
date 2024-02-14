@@ -10,7 +10,7 @@ export default function Hero() {
                     src="/images/plane.webp"
                     alt="Hero"
                     fill
-                    className="object-cover md:object-[center_-120px]"
+                    className="object-cover"
                     priority
                 />
             </div>

@@ -23,7 +23,6 @@ export default function ExpandableBox() {
             });
 
             mmRef.current.add("(min-width: 768px)", () => {
-                console.log("useGSAP :: run");
                 gsap.set(".animated-el", { opacity: 1, y: 0 });
 
                 menuTimeline.current = gsap.timeline({
@@ -75,7 +74,7 @@ export default function ExpandableBox() {
     return (
         <div
             ref={containerRef}
-            className="max-w-[606px] bg-white px-4 py-8 md:grid md:grid-cols-[1fr_auto] md:items-start md:gap-2 md:py-10 md:pl-[7.5rem] md:pr-18"
+            className="max-w-[606px] bg-white px-4 py-8 md:grid md:grid-cols-[1fr_auto] md:items-start md:gap-2 md:rounded-tr-md md:py-10 md:pl-[7.5rem] md:pr-18"
         >
             <div>
                 <Label classNames="inline-block pb-2">Lorem ipsum</Label>

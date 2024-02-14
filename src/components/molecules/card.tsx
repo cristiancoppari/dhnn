@@ -27,6 +27,7 @@ export default function Card({
                 width={400}
                 height={200}
                 className="aspect-[300/282] w-full rounded-lg md:aspect-[384/282]"
+                loading="lazy"
             />
 
             <Divider classNames="my-4" bg="black" width="full" height="2" />
@@ -38,6 +39,8 @@ export default function Card({
             <SmallText classNames="mb-2">{description}</SmallText>
 
             <Button variant="link">Call to action</Button>
+
+            {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div> */}
         </article>
     );
 }
