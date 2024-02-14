@@ -2,6 +2,10 @@
 
 The main goal of this challenge is to recreate a simple web application with a slider following this [`design`](https://www.figma.com/file/5KsNuGyMeoo3BZvUSYINnS/DHNN-%E2%80%94-Front-end-Developer-Challenge?type=design&node-id=0-914&mode=design&t=P5Z9EUYF0CweU8I9-0).
 
+## Design Structure
+
+-   [Atomic Design](https://www.gluo.mx/blog/atomic-design-que-es-para-que-sirve-y-ejemplos)
+
 ## Tech Stack
 
 -   [Next.js](https://nextjs.org/)
