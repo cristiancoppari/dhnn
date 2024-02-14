@@ -9,7 +9,8 @@ const config: Config = {
     theme: {
         extend: {
             height: {
-                screen: "calc(100dvh - 3.75rem)",
+                "screen-mobile": "calc(100dvh - 3.75rem)",
+                "screen-desktop": "calc(100dvh - 5rem)",
             },
             screens: {
                 "lg-2": "1130px",

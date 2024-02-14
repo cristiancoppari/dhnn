@@ -5,7 +5,7 @@ import ExpandableBox from "@/components/molecules/expandable-box";
 export default function Hero() {
     return (
         <section className="relative flex flex-col">
-            <div className="relative h-[265px] md:h-[700px]">
+            <div className="h-screen-mobile md:h-screen-desktop relative">
                 <Image
                     src="/images/plane.webp"
                     alt="Hero"

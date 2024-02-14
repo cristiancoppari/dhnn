@@ -130,7 +130,7 @@ const NavMobile = ({ isOpen }: { isOpen: boolean }) => {
             ref={containerRef}
             className="absolute top-[3.75rem] z-10 w-full flex-col gap-2 overflow-hidden bg-white opacity-0"
         >
-            <ul className="mt-4 flex h-screen flex-col">
+            <ul className="h-screen-mobile mt-4 flex flex-col">
                 {ALL_NAV_ITEMS.map((item, index) => (
                     <li
                         key={index}
