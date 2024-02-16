@@ -1,17 +1,17 @@
 "use client";
 
+import { type SwiperOptions } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
 import { NextArrow, PrevArrow } from "@/components/atoms/icon";
 import Card from "@/components/molecules/card";
 
-const swiperConfigProps = {
+const swiperConfigProps: SwiperOptions = {
     spaceBetween: 8,
     slidesPerView: 1.15,
     modules: [Navigation, Pagination],
     navigation: {
-        el: "#navContainer",
         nextEl: ".carousel-next",
         prevEl: ".carousel-prev",
     },
@@ -19,10 +19,10 @@ const swiperConfigProps = {
     pagination: {
         type: "fraction",
         el: "#paginationFraction",
-        formatFractionCurrent: function (number: string) {
+        formatFractionCurrent: function (number: number) {
             return ("0" + number).slice(-2);
         },
-        formatFractionTotal: function (number: string) {
+        formatFractionTotal: function (number: number) {
             return ("0" + number).slice(-2);
         },
         renderFraction: function (currentClass: string, totalClass: string) {
