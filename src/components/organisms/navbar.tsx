@@ -37,11 +37,16 @@ export default function Navbar() {
 
     return (
         <header className="relative mb-0 flex h-[3.75rem] w-full justify-between border-b border-[var(--gray-light)] xl:px-[3rem] 2xl:h-[5.5rem] 2xl:px-[7.5rem]">
-            <Link href="/" className="self-center pl-4 xl:px-0 2xl:py-5">
+            <Link
+                href="/"
+                className="self-center pl-4 xl:px-0 2xl:py-5"
+                aria-label="Aeronex Logo"
+            >
                 <Logo classNames="w-[8.5rem] 2xl:w-[11.125rem] 2xl:w-[8rem]" />
             </Link>
 
             <button
+                id="openMenuBtn"
                 className="block border-l border-[var(--gray-light)] p-[1.125rem] lg-2:hidden"
                 onClick={() => setIsOpen((prev) => !prev)}
             >
