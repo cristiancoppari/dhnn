@@ -15,6 +15,8 @@ export default function Hero() {
                         src="/images/hero-mobile.webp"
                         alt="Aeronex"
                         className="w-full object-contain md:h-full md:object-cover"
+                        height={360}
+                        width={265}
                     />
                 </picture>
             </div>
