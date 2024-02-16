@@ -5,13 +5,14 @@ import ExpandableBox from "@/components/molecules/expandable-box";
 export default function Hero() {
     return (
         <section className="relative flex flex-col">
-            <div className="h-screen-mobile md:h-screen-desktop relative">
+            <div className="relative h-screen-mobile md:h-screen-desktop">
                 <Image
                     src="/images/plane.webp"
                     alt="Hero"
                     fill
                     className="object-cover"
                     priority
+                    sizes="100vw"
                 />
             </div>
 
