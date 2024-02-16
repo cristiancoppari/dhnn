@@ -49,6 +49,7 @@ export default function Navbar() {
                 id="openMenuBtn"
                 className="block border-l border-[var(--gray-light)] p-[1.125rem] lg-2:hidden"
                 onClick={() => setIsOpen((prev) => !prev)}
+                aria-label="Open menu button"
             >
                 <NavIcon />
             </button>
