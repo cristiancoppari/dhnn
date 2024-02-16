@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, forwardRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import gsap from "gsap";
@@ -130,7 +130,7 @@ const NavMobile = ({ isOpen }: { isOpen: boolean }) => {
             ref={containerRef}
             className="absolute top-[3.75rem] z-10 w-full flex-col gap-2 overflow-hidden bg-white opacity-0"
         >
-            <ul className="h-screen-mobile mt-4 flex flex-col">
+            <ul className="mt-4 flex h-screen-mobile flex-col">
                 {ALL_NAV_ITEMS.map((item, index) => (
                     <li
                         key={index}
