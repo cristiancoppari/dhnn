@@ -32,7 +32,7 @@ export default function Card({
 
             <Divider classNames="my-4" bg="black" width="full" height="2" />
 
-            <Title as="h4" variant="card" classNames="mb-2">
+            <Title as="h3" variant="card" classNames="mb-2">
                 {title}
             </Title>
 

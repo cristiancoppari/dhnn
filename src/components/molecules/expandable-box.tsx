@@ -100,6 +100,7 @@ export default function ExpandableBox() {
 
             <button
                 id="toggleBtn"
+                aria-label="Open box button"
                 onClick={() => setIsExpanded((prev) => !prev)}
             >
                 <Arrow classNames="hidden md:block" />
