@@ -15,7 +15,6 @@ The main goal of this challenge is to recreate a simple web application with a s
 -   [Swiper](https://swiperjs.com/)
 -   [Prettier](https://prettier.io/)
 -   [ESLint](https://eslint.org/)
--   [Husky](https://typicode.github.io/husky/#/)
 
 ## Extensions
 
